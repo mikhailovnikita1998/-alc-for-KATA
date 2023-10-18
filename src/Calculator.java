@@ -69,7 +69,7 @@ public class Calculator {
                 System.out.println(result);
             }
         }else{
-            System.out.println("                   Числа должны быть в одном формате");
+            System.out.println("                          Числа должны быть в одном формате");
         }
 
 
