@@ -63,10 +63,12 @@ class Calculator {
 
     static int calc(int a, int b, String oper) {
 
-        if (oper.equals("+")) return a + b;
-        else if (oper.equals("-")) return a - b;
-        else if (oper.equals("*")) return a * b;
-        else return a / b;
+        return switch (oper) {
+            case "+" -> a + b;
+            case "-" -> a - b;
+            case "*" -> a * b;
+            default -> a / b;
+        };
     }
 
 }
@@ -83,8 +85,8 @@ class Roman { //0 специально для индекса.
             "XCVIII", "XCIX", "C"};
 
     public static boolean isRoman(String val) {
-        for (int i = 0; i < romanArray.length; i++) {
-            if (val.equals(romanArray[i])) {
+        for (String s : romanArray) {
+            if (val.equals(s)) {
                 return true;
             }
         }
