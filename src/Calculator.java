@@ -32,7 +32,7 @@ class Calculator {
             num2 = Integer.parseInt(operands[1]);
             isRoman = false;
         }
-        //если одни число римское, а другое - арабское
+
         else {
             throw new Exception("т.к. используются одновременно разные системы счисления");
         }
@@ -41,7 +41,6 @@ class Calculator {
         }
         int arabian = calc(num1, num2, oper);
         if (isRoman) {
-            //если римское число получилось меньше либо равно нулю, генерируем ошибку
             if (arabian <= 0) {
                 throw new Exception("т.к. в римской системе нет отрицательных чисел");
             }
@@ -51,7 +50,6 @@ class Calculator {
             //Конвертируем арабское число в тип стринг
             result = String.valueOf(arabian);
         }
-        //возвращаем результат
         return result;
     }
 
