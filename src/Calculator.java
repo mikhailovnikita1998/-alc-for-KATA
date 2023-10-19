@@ -80,7 +80,7 @@ class Roman { //0 специально для индекса.
             "LXIII", "LXIV", "LXV", "LXVI", "LXVII", "LXVIII", "LXIX", "LXX", "LXXI", "LXXII", "LXXIII", "LXXIV",
             "LXXV", "LXXVI", "LXXVII", "LXXVIII", "LXXIX", "LXXX", "LXXXI", "LXXXII", "LXXXIII", "LXXXIV", "LXXXV",
             "LXXXVI", "LXXXVII", "LXXXVIII", "LXXXIX", "XC", "XCI", "XCII", "XCIII", "XCIV", "XCV", "XCVI", "XCVII",
-            "XCVIII", "XCIX", "C" };
+            "XCVIII", "XCIX", "C"};
 
     public static boolean isRoman(String val) {
         for (int i = 0; i < romanArray.length; i++) {
