@@ -37,7 +37,7 @@ class Calculator {
             throw new Exception("т.к. используются одновременно разные системы счисления");
         }
         if (num1 > 10 || num2 > 10) {
-            throw new Exception("т.к. числа должны быть от 1 до 10");
+            throw new Exception("т.к. числа должны быть от 1 до 10 ");
         }
         int arabian = calc(num1, num2, oper);
         if (isRoman) {
