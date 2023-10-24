@@ -41,8 +41,8 @@ class Calculator {
         }
         int arabian = calc(num1, num2, oper);
         if (isRoman) {
-            if (arabian <= 0) {
-                throw new Exception("т.к. в римской системе нет отрицательных чисел  ");
+             if (arabian <= 0) {
+                throw new Exception("т.к. в римской системе нет отрицательных чисел");
             }
             //конвертируем результат операции из арабского в римское
             result = Roman.convertToRoman(arabian);
