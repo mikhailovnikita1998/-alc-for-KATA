@@ -27,16 +27,23 @@ public class Main {
         for (int i = 0; i < data.length; i++) {
             data[i] = data[i].replace("\"", "");
         }
-
         if (action == '+') {
             printInQuotes(data[0] + data[1]);
+
         } else if (action == '*') {
             int multiplier = Integer.parseInt(data[1]);
             String result = "";
             for (int i = 0; i < multiplier; i++) {
                 result+=data[0];
             }
-            printInQuotes(result);
+
+            if (result.length() > 40){
+                String res = result.substring(0, 40);
+                System.out.println("\""+res+"\"" + "...");
+             } else {
+                printInQuotes(result);
+        }
+
         } else if (action == '-') {
             int index = data[0].indexOf(data[1]);
             if(index == -1){
@@ -51,8 +58,6 @@ public class Main {
             String result = data[0].substring(0,newLen);
             printInQuotes(result);
         }
-
-
     }
     static void printInQuotes(String text){
         System.out.println("\""+text+"\"");
